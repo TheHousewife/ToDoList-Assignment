@@ -20,5 +20,22 @@ namespace ToDoList
         {
             InitializeComponent();
         }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            string task = TaskTextBox.Text;
+        }
+
+        private void RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TasksListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+
     }
 }
