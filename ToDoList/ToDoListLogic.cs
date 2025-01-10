@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ToDoList
+﻿namespace ToDoList
 {
 
     //<summary>
@@ -25,7 +19,7 @@ namespace ToDoList
             {
                 tasks.RemoveAt(index);
             }
-            
+
         }
 
         public List<string> GetAllTasks()
