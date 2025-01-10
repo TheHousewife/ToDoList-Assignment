@@ -13,6 +13,27 @@ namespace ToDoList
         {
             InitializeComponent();
             _ToDoListLogic = new ToDoListLogic();
+            TaskTextBox.Text = "Enter a task...";
+        }
+
+        private const string PlaceholderText = "Enter a task...";
+
+        private void TaskTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TaskTextBox.Text == PlaceholderText)
+            {
+                TaskTextBox.Text = string.Empty;
+                TaskTextBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Black);
+            }
+        }
+
+        private void TaskTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TaskTextBox.Text))
+            {
+                TaskTextBox.Text = PlaceholderText;
+                TaskTextBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Gray);
+            }
         }
 
 
@@ -26,6 +47,7 @@ namespace ToDoList
                 _ToDoListLogic.AddTask(task);
                 UpdateTaskList();
                 TaskTextBox.Clear();
+                TaskTextBox.Text = "Enter a task...";
             }
 
 

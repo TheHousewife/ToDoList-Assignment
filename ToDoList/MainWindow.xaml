@@ -1,11 +1,17 @@
 ﻿<Window x:Class="ToDoList.MainWindow"
 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-Title="To-Do App" Height="350" Width="525">
-    <Grid>
-        <TextBox Name="TaskTextBox" Background="LightGray" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="375" Height="30"/>
-        <Button Name="AddButton" Background="CornflowerBlue" Foreground="White" Content="Lägg till uppgift" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="30" Margin="415,10,0,0" Click="AddButton_Click" RenderTransformOrigin="0.628,0.688"/>
-        <ListBox Name="TasksListBox" Background="LightGray" HorizontalAlignment="Left" Height="200" Margin="10,50,0,0" VerticalAlignment="Top" Width="480"/>
-        <Button Name="RemoveButton" Background="Red" Foreground="White" Content="Ta bort uppgift" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="30" Margin="415,265,0,0" Click="RemoveButton_Click"/>
+Title="To-Do App" Height="362" Width="545">
+    <Grid Margin="10,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="281*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="TaskTextBox" Background="LightGray" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="375" Height="30" GotFocus="TaskTextBox_GotFocus" LostFocus="TaskTextBox_LostFocus"/>
+        <Button Name="AddButton" Background="CornflowerBlue" Foreground="White" Content="Add task" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="30" Margin="401,10,0,0" Click="AddButton_Click" RenderTransformOrigin="0.628,0.688" Cursor="Hand"/>
+        <ListBox Name="TasksListBox" Background="LightGray" HorizontalAlignment="Left" Height="200" Margin="10,50,0,0" VerticalAlignment="Top" Width="491"/>
+        <Button Name="RemoveButton" Background="Red" Foreground="White" Content="Remove task" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="30" Margin="401,265,0,0" Click="RemoveButton_Click" Cursor="Hand" Grid.RowSpan="2"/>
     </Grid>
 </Window>
