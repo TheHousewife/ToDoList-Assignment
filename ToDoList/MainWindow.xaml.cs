@@ -25,7 +25,7 @@ namespace ToDoList
                 TaskTextBox.Text = string.Empty;
                 TaskTextBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Black);
             }
-        }
+        }   //removes the placeholder text and makes the input text black so that it feels different from the placeholder text
 
         private void TaskTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -33,8 +33,8 @@ namespace ToDoList
             {
                 TaskTextBox.Text = PlaceholderText;
                 TaskTextBox.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Gray);
-            }
-        }
+            }   
+        }   //Makes the text gray so it looks more like placeholder text rather than text that the user has put in
 
 
 
@@ -52,7 +52,7 @@ namespace ToDoList
 
 
         }
-        //adds the task and clears the textbox
+        //adds the task and clears the textbox, also re-adding the placeholder text 
 
         private void UpdateTaskList()
         {
